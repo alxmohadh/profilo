@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- Google Fonts import for Merienda and Quicksand fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Quicksand:wght@500&display=swap"
+      rel="stylesheet">
+    <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="css/main-styles.css" />
+    <link rel="stylesheet" href="css/auth-styles.css">
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-card">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit" class="auth-button">Login</button>
+        </form>
+        <p class="auth-link">Don't have an account? <a href="signup.html">Register here</a></p>
+      </div>
+    </div>
+    <!-- JavaScript files -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/authentication.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

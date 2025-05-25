@@ -1,0 +1,421 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for body and html */
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    background: #fff;
+}
+
+/* Main container styles */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+}
+
+/* Banner section with gradient background */
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 234px;
+    background: linear-gradient(90deg, #FF4286 0%, #FD7F78 100%);
+    border-radius: 0 0 60px 60px;
+    overflow: hidden;
+}
+
+/* Base styles for all bubbles */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    will-change: transform;
+}
+
+.bubble:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Individual bubble styles with unique positions and sizes */
+.bubble-1 { width: 140px; height: 140px; opacity: 0.8; }
+.bubble-2 { width: 90px; height: 90px; opacity: 0.7; }
+.bubble-3 { width: 90px; height: 90px; opacity: 0.6; }
+.bubble-4 { width: 60px; height: 60px; opacity: 0.5; }
+.bubble-5 { width: 110px; height: 110px; opacity: 0.8; }
+.bubble-6 { width: 110px; height: 110px; opacity: 0.7; }
+.bubble-7 { width: 90px; height: 90px; opacity: 0.6; }
+.bubble-8 { width: 180px; height: 180px; opacity: 0.5; }
+.bubble-9 { width: 90px; height: 90px; opacity: 0.7; }
+.bubble-10 { width: 90px; height: 90px; opacity: 0.6; }
+.bubble-11 { width: 110px; height: 110px; opacity: 0.8; }
+.bubble-12 { width: 110px; height: 110px; opacity: 0.7; }
+.bubble-13 { width: 110px; height: 110px; opacity: 0.6; }
+.bubble-14 { width: 110px; height: 110px; opacity: 0.5; }
+.bubble-15 { width: 90px; height: 90px; opacity: 0.7; }
+.bubble-16 { width: 140px; height: 140px; opacity: 0.8; }
+.bubble-17 { width: 90px; height: 90px; opacity: 0.6; }
+.bubble-18 { width: 90px; height: 90px; opacity: 0.7; }
+.bubble-19 { width: 60px; height: 60px; opacity: 0.5; }
+.bubble-20 { width: 110px; height: 110px; opacity: 0.8; }
+.bubble-21 { width: 110px; height: 110px; opacity: 0.7; }
+.bubble-22 { width: 70px; height: 70px; opacity: 0.6; }
+.bubble-23 { width: 85px; height: 85px; opacity: 0.7; }
+.bubble-24 { width: 65px; height: 65px; opacity: 0.5; }
+.bubble-25 { width: 95px; height: 95px; opacity: 0.8; }
+.bubble-26 { width: 75px; height: 75px; opacity: 0.6; }
+.bubble-27 { width: 85px; height: 85px; opacity: 0.7; }
+.bubble-28 { width: 65px; height: 65px; opacity: 0.5; }
+.bubble-29 { width: 90px; height: 90px; opacity: 0.8; }
+.bubble-30 { width: 80px; height: 80px; opacity: 0.6; }
+
+/* Profile card container */
+.profile-card {
+    width: 90%;
+    max-width: 700px;
+    height: 400px;
+    background: white;
+    border-radius: 30px;
+    padding: 120px 40px 40px;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    left: 50%;
+    transform: translateX(-50%);
+    animation: cardAppear 0.8s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateX(-50%) translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes cardAppear {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Profile image styles */
+.profile-img {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 4px solid white;
+    animation: imageAppear 0.8s ease-out;
+}
+
+@keyframes imageAppear {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/* Decorative dots styles */
+.dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+}
+
+/* Left dot color */
+.dot.left {
+    background-color: #FF4286;
+    left: 20px;
+}
+
+/* Right dot color */
+.dot.right {
+    background-color: #FD7F78;
+    right: 20px;
+}
+
+/* Name text styles */
+.name {
+    font-family: 'Merienda', cursive;
+    font-size: 36px;
+    color: #444;
+    position: relative;
+    min-height: 50px;
+    display: inline-block;
+    animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
+/* Location text styles */
+.location {
+    font-family: 'Merienda';
+    font-size: 16px;
+    color: #888;
+    margin-top: 4px;
+    animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+/* Title text styles */
+.title {
+    font-family: 'Merienda';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #6E6E6E;
+    margin-top: 55px;
+    animation: fadeIn 0.8s ease-out 0.5s both;
+}
+
+/* Stats container styles */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+/* Individual stat item styles */
+.stat {
+    text-align: center;
+}
+
+/* Stat number styles */
+.stat-number {
+    font-family: 'Merienda';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #6E6E6E;
+    margin-top: 10px;
+}
+
+/* Stat label styles */
+.stat-label {
+    font-family: 'Merienda';
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 1.2;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #6E6E6E;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .profile-card {
+        width: 85%;
+        max-width: 600px;
+        height: auto;
+        min-height: 380px;
+        padding: 100px 30px 30px;
+    }
+
+    .stats {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 180px;
+        border-radius: 0 0 40px 40px;
+    }
+    
+    .profile-card {
+        top: 15%;
+        height: auto;
+        min-height: 380px;
+        padding: 100px 20px 30px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    .stats {
+        gap: 30px;
+    }
+
+    .stat-number {
+        font-size: 22px;
+    }
+
+    .stat-label {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body, html {
+        font-size: 14px;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .banner {
+        height: 120px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+    }
+
+    .profile-card {
+        width: 95%;
+        padding: 80px 15px 20px;
+        top: 10%;
+        border-radius: 20px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    .location {
+        font-size: 14px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 20px;
+    }
+
+    .stat-label {
+        font-size: 14px;
+    }
+
+    .bubble {
+        display: block;
+        opacity: 0.5;
+    }
+}
+
+/* Logout button styles */
+#logoutButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(90deg, #FF4286 0%, #FD7F78 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+#logoutButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(90deg, #FF4286 10%, #FD7F78 90%);
+}
+
+#logoutButton:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#logoutButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 66, 134, 0.3);
+}
+
+/* Responsive styles for logout button */
+@media (max-width: 768px) {
+    #logoutButton {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logoutButton {
+        padding: 8px 20px;
+        font-size: 13px;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
